@@ -26,7 +26,20 @@
       to { text-shadow: 0 0 30px #fff, 0 0 60px gold; }
     }
 
-    
+    .curtain {
+      position: fixed;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to bottom, #b8860b, #ffd700);
+      z-index: 10;
+      transition: transform 2s ease-in-out;
+    }
+    .left-curtain { left: 0; }
+    .right-curtain { right: 0; }
+
+    .open-left { transform: translateX(-100%); }
+    .open-right { transform: translateX(100%); }
 
     .cake {
       position: relative;
@@ -154,7 +167,8 @@
 </head>
 <body>
 
-  
+  <div class="curtain left-curtain"></div>
+  <div class="curtain right-curtain"></div>
 
   <h1>Happy 50th Birthday Mom 🎉</h1>
 
@@ -174,7 +188,7 @@
   <div class="envelope" id="envelope">Happy 50th Birthday Mom 💖</div>
 
   <audio id="bgMusic" loop>
-    <source src="birthday-songmp.3.mp3" type="audio/mpeg">
+    <source src="D:\Mom_birthday\music\birthday-songmp.3.mp3" type="audio/mpeg">
   </audio>
 
   <script>
@@ -234,3 +248,4 @@
 </body>
 </html>
 
+      
